@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s;
+        }
+        .container {
+            width: 560px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;            
+        }
+        button{
+            width: 120px;
+            height: 50px;
+        }
+        button:nth-child(1){
+            background-color: red;
+            color: white;
+            border: none;
+        }
+        button:nth-child(2){
+            background-color: green;
+            color: white;
+            border: none;
+        }
+        button:nth-child(3){
+            background-color: blue;
+            color: white;
+            border: none;
+        }
+        button:nth-child(4){
+            background-color: purple;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body id="bdy">
+    <div class="container">
+    <button class="color" id="color" onclick="changeR()">
+        red
+    </button>
+    <button class="color" id="color1" onclick="changeG()">
+        green
+    </button>
+    <button class="color" id="color2" onclick="changeB()">
+        blue
+    </button>
+    <button class="color" id="color3" onclick="changeP()">
+        purple
+    </button>
+    </div>
+    <script>
+        const btn1 = document.getElementById("color");
+        const btn2 = document.getElementById("color1");
+        const btn3 = document.getElementById("color2");
+        const btn4 = document.getElementById("color3");
+        const bdy = document.getElementById("bdy");
+        function changeR(){
+             bdy.style.background = bdy.style.background === "red" ? "white" : "red"; 
+        }
+        function changeG(){
+             bdy.style.background = bdy.style.background === "green" ? "white" : "green"; 
+        }
+        function changeB(){
+             bdy.style.background = bdy.style.background === "blue" ? "white" : "blue"; 
+        }
+        function changeP(){
+             bdy.style.background = bdy.style.background === "purple" ? "white" : "purple"; 
+        }
+    </script>
+</body>
+</html>
